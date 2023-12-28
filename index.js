@@ -8,7 +8,7 @@ import docenv from 'dotenv';
 const app = express();
 docenv.config()
 ConnectToDb();
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use('/api/users/',userRoutes)
